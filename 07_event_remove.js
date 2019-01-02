@@ -21,6 +21,5 @@ setInterval(() => {
 
 setTimeout(() => {
     ce.removeListener('test', fn1)
-
-    ce.removeAllListener('test')
+    // ce.removeAllListener('test')
 }, 1500)
