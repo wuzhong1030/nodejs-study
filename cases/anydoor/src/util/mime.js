@@ -1,23 +1,23 @@
-const path = require("path");
+const path = require('path')
 const MIME = {
-  css: "text/css",
-  js: "text/javascript",
-  html: "text/html",
-  jpg: "image/jpeg",
-  json: "application/json",
-  txt: "text/plain"
-};
+  css: 'text/css',
+  js: 'text/javascript',
+  html: 'text/html',
+  jpg: 'image/jpeg',
+  json: 'application/json',
+  txt: 'text/plain'
+}
 
 module.exports = filePath => {
   let ext = path
     .extname(filePath)
-    .split(".")
+    .split('.')
     .pop()
-    .toLocaleLowerCase();
+    .toLocaleLowerCase()
 
   if (!ext) {
-    ext = filePath;
+    ext = filePath
   }
 
-  return MIME[ext] || MIME[txt];
-};
+  return MIME[ext] || MIME[txt]
+}
